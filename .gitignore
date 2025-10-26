@@ -1,0 +1,12 @@
+# Ignore data and temp files
+data/storage.json
+data/*.bak
+data/*.tmp
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code settings
+.vscode/

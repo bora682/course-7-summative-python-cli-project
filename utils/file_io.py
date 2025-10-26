@@ -1,7 +1,7 @@
 # utils/file_io.py
 import json
 import os
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any
 from models.user import User
 from models.project import Project
 from models.task import Task
@@ -119,7 +119,6 @@ def load_all(path: str = STORAGE_PATH) -> List[User]:
             status=t.get("status", "todo"),
         )
         task.id = int(t["id"])
-        # contributors
         for uid in t.get("contributor_ids", []):
             u = users_by_id.get(int(uid))
             if u:
